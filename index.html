@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday 🎂</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Ketuk untuk mulai + memicu lagu (wajib karena browser blokir autoplay bersuara) -->
+  <div id="startOverlay">
+    <div class="icon">🎁</div>
+    <h2>kejutan little-little ych</h2>
+    <button id="startBtn">ketuk untuk membuka 💌</button>
+  </div>
+
+  <!-- GANTI src DI BAWAH INI DENGAN FILE LAGUMU SENDIRI, misalnya "lagu.mp3" -->
+  <audio id="bgMusic" src="hbd2.mp4" loop></audio>
+
+  <div id="app">
+    <div id="bgLayer"></div>
+
+    <div class="stage" id="stage">
+      <button id="musicBtn" onclick="toggleMusic()">🔊</button>
+
+      <!-- PAGE 1 -->
+      <div class="page active" id="page1">
+        <span class="sparkle">✨</span>
+        <h1>HABEDE,<br><span style="color:#c9538a">KANJENG ZENAL</span>! 🎉</h1>
+        <p style="margin-top:14px;font-size:.85rem;opacity:.8;">kejutan little-little...</p>
+        <div class="tap-hint">ketuk panah di bawah untuk lanjut →</div>
+      </div>
+
+      <!-- PAGE 2 -->
+      <div class="page" id="page2">
+        <div class="photo-frame">
+          <div class="tape"></div>
+          <img src="z.jpeg">
+        </div>
+        <h2>Happy Birthday</h2>
+        <p>Selamat Ulang Tahun ya anak muda semoga selalu diberi rasa syukur yang besar, berkah barokah hidupmu anak
+          muda. Sisanya doanya privat ajalah hanya allah yang tau (fotonya bagus ya inith pang bgusna nan indah)</p>
+      </div>
+
+      <!-- PAGE 3 -->
+      <!-- PAGE 3 -->
+      <div class="page" id="page3">
+        <h2>BEST SELLER FAVORIT</h2>
+
+        <div class="memory-photos">
+          <div class="memory-photo">
+            <img src="z.jpeg" alt="Foto kenangan 1">
+          </div>
+
+          <div class="memory-photo">
+            <img src="z.jpeg" alt="Foto kenangan 2">
+          </div>
+        </div>
+
+        <p class="memory-text">
+          imyuttt nya
+        </p>
+      </div>
+
+      <!-- PAGE 4 -->
+      <div class="page" id="page4">
+        <h1>Semoga semua<br>harapanmu terkabul kanjeng </h1>
+        <p style="margin-top:14px;font-size:.85rem;opacity:.8;max-width:270px;">
+          makasih selalu ada semoga lancar rezekimu anak muda
+          sekali lagi selamat ulang tahun, semoga selalu bahagia yoi brow sorry inimh gbisa menyusun kata" jadi maafin
+          (iyeu mun slh mklmunwe nya da ath mnusia tmptna slh)
+        </p>
+        <div class="signature">— salam dri org imut, dengan sayang</div>
+        <button class="replay" onclick="goTo(0)">putar ulang ↻</button>
+      </div>
+
+      <button class="nav-btn" id="prevBtn" onclick="goTo(current-1)">‹</button>
+      <button class="nav-btn" id="nextBtn" onclick="goTo(current+1)">›</button>
+      <div class="dots" id="dots"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
